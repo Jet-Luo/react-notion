@@ -8,9 +8,9 @@ export const Footer = () => {
     //         © 2025 Yestion. All rights reserved.
     //     </div>
     // </div>
-    <div className="flex items-center w-full p-6 bg-background z-50 dark:bg-[#1F1F1F]">
+    <div className="bg-background z-50 flex w-full items-center p-6 dark:bg-[#1F1F1F]">
       <Logo />
-      <div className="md:ml-auto w-full flex justify-between md:justify-end items-center gap-x-2 text-muted-foreground">
+      <div className="text-muted-foreground flex w-full items-center justify-between gap-x-2 md:ml-auto md:justify-end">
         <Button variant="ghost" size="sm">
           Privacy Policy
         </Button>

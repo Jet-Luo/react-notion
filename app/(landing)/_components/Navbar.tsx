@@ -14,13 +14,13 @@ export const Navbar = () => {
     // </nav>
     <nav
       className={cn(
-        'z-50 bg-background dark:bg-[#1F1F1F] fixed top-0 flex items-center w-full p-6 transition-all',
+        'bg-background fixed top-0 z-50 flex w-full items-center p-6 transition-all dark:bg-[#1F1F1F]',
         scrolled &&
-          'border-b border-neutral-200 dark:border-neutral-800 shadow-sm dark:shadow-neutral-200/10'
+          'border-b border-neutral-200 shadow-sm dark:border-neutral-800 dark:shadow-neutral-200/10'
       )}
     >
       <Logo />
-      <div className="md:ml-auto flex items-center justify-between md:justify-end gap-x-2">
+      <div className="flex items-center justify-between gap-x-2 md:ml-auto md:justify-end">
         <ModeToggle />
       </div>
     </nav>

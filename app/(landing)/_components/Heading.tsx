@@ -16,12 +16,12 @@ export const Heading = () => {
     //     </button>
     // </>
     <div className="max-w-3xl space-y-4">
-      <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold">
+      <h1 className="text-3xl font-bold sm:text-5xl md:text-6xl">
         {/* Welcome to <span className="text-blue-600">Yestion</span> */}
         Your Ideas, Documents & Knowledge, Organized. Welcome to{' '}
         <span className="underline">Yestion</span>
       </h1>
-      <h3 className="text-base sm:text-xl md:text-2xl font-medium">
+      <h3 className="text-base font-medium sm:text-xl md:text-2xl">
         Yestion is a Notion-like app built with Next.js and Tailwind CSS, designed to help you
         capture, organize, and share your ideas effortlessly.
       </h3>
