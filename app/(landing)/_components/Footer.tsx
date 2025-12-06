@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     // <div className="w-full border-t mt-10">
     //     <div className="max-w-7xl mx-auto py-6 px-4 text-center text-sm text-gray-500">
-    //         © 2025 Yestion. All rights reserved.
+    //         © 2025 PageFlow. All rights reserved.
     //     </div>
     // </div>
     <div className="bg-background z-50 flex w-full items-center p-6 dark:bg-[#1F1F1F]">

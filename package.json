@@ -1,5 +1,5 @@
 {
-  "name": "react-notion",
+  "name": "page-flow",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "eslint": "^9.39.1",
     "eslint-config-next": "16.0.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",

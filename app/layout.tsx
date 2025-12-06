@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Yestion',
+  title: 'PageFlow',
   description: 'Notion-like app built with Next.js and Tailwind CSS',
   icons: {
     icon: [
@@ -45,7 +45,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-          storageKey="yestion-theme"
+          storageKey="page-flow-theme"
         >
           {children}
         </ThemeProvider>
