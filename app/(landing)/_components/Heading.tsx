@@ -5,8 +5,13 @@
 
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
+import { useConvexAuth, Unauthenticated } from 'convex/react'
+import { Spinner } from '@/components/spinner'
+import Link from 'next/dist/client/link'
+import { SignInButton } from '@clerk/nextjs'
 
 export const Heading = () => {
+  const { isAuthenticated, isLoading } = useConvexAuth()
   return (
     // <>
     //     <h1 className="text-4xl font-extrabold text-gray-900 mb-6">Welcome to Our App</h1>
@@ -28,11 +33,39 @@ export const Heading = () => {
         PageFlow is a Notion-like workspace built with Next.js and Tailwind CSS, designed to help
         you capture, organize, and share your ideas effortlessly.
       </h3>
-      <Button>
-        Flow Your Ideas Now
-        {/*<ArrowRight className="h-4 2-4 ml-2"/>*/}
-        <ArrowRight />
-      </Button>
+      {isLoading && (
+        <div className="flex w-full items-center justify-center">
+          <Spinner size="icon" />
+        </div>
+      )}
+      {!isLoading && isAuthenticated && (
+        <Button asChild>
+          <Link href="/documents">
+            Flow Your Ideas Now
+            {/*<ArrowRight className="h-4 2-4 ml-2"/>*/}
+            <ArrowRight />
+          </Link>
+        </Button>
+      )}
+      {/*{!isLoading && !isAuthenticated && (*/}
+      {/*  <SignInButton mode="modal">*/}
+      {/*    <Button>*/}
+      {/*      Flow Your Ideas Now*/}
+      {/*      /!*<ArrowRight className="h-4 2-4 ml-2"/>*!/*/}
+      {/*      <ArrowRight />*/}
+      {/*    </Button>*/}
+      {/*  </SignInButton>*/}
+      {/*)}*/}
+      {/*使用 Unauthenticated 组件来包裹未认证用户的内容，也能达到同样的效果*/}
+      <Unauthenticated>
+        <SignInButton mode="modal">
+          <Button>
+            Flow Your Ideas Now
+            {/*<ArrowRight className="h-4 2-4 ml-2"/>*/}
+            <ArrowRight />
+          </Button>
+        </SignInButton>
+      </Unauthenticated>
     </div>
   )
 }
