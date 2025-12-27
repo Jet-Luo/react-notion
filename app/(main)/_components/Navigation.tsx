@@ -5,6 +5,7 @@ import React, { ComponentRef, useCallback, useEffect, useRef, useState } from 'r
 import { useMediaQuery } from 'usehooks-ts'
 import { usePathname } from 'next/dist/client/components/navigation'
 import { cn } from '@/lib/utils'
+import UserItem from '@/app/(main)/_components/UserItem'
 
 export const Navigation = () => {
   const pathname: string = usePathname()
@@ -181,7 +182,7 @@ export const Navigation = () => {
           <ChevronsLeft className="h-6 w-6" />
         </div>
         <div>
-          <p>action items</p>
+          <UserItem />
         </div>
         <div className="mt-4">
           <p>documents list </p>
